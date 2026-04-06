@@ -34,18 +34,18 @@
     <div id="uoFields" style="display:none;">
         <div class="input-section">
             <label>Фактический товарооборот *</label>
-            <input type="number" id="actualTurnover" class="input-field" min="0" max="1000000" step="1000">
+            <input type="number" id="actualTurnover" class="input-field" min="0" max="100000000" step="1000">
             <div id="turnoverError" class="error-message"></div>
-            <small class="salary-note">Максимум 1 000 000 руб. Влияет на оклад (0.15% от товарооборота)</small>
+            <small class="salary-note">Максимум 100 000 000 руб. Влияет на оклад (0.15% от товарооборота)</small>
         </div>
     </div>
     
     <div id="zuoFields" style="display:none;">
         <div class="input-section">
             <label>Фактический товарооборот *</label>
-            <input type="number" id="zuoTurnover" class="input-field" min="0" max="1000000" step="1000">
+            <input type="number" id="zuoTurnover" class="input-field" min="0" max="100000000" step="1000">
             <div id="zuoTurnoverError" class="error-message"></div>
-            <small class="salary-note">Максимум 1 000 000 руб.</small>
+            <small class="salary-note">Максимум 100 000 000 руб.</small>
         </div>
         
         <div class="input-section">
@@ -71,13 +71,13 @@
          Премиальная часть (заполняется при наличии)
     </div>
     
-    <!-- Поля для кассира-продавца и продавца гастрономии -->
+        <!-- Поля для кассира-продавца и продавца гастрономии -->
     <div id="cashierBonusFields" style="display:none;">
         <div class="input-section">
             <label>Товарооборот по кассе, руб</label>
-            <input type="number" id="cashTurnover" class="input-field" min="0" max="1000000" step="1000">
+            <input type="number" id="cashTurnover" class="input-field" min="0" max="100000000" step="1000">
             <div id="cashTurnoverError" class="error-message"></div>
-            <small class="salary-note">Максимум 1 000 000 руб. Влияет на размер премии (0.1% от суммы)</small>
+            <small class="salary-note">Максимум 100 000 000 руб. Влияет на размер премии (0.1% от суммы)</small>
         </div>
 
         <div class="input-section">

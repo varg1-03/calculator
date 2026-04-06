@@ -233,8 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (uo < 0) {
                         setError(turnoverInput, turnoverError, 'Товарооборот не может быть отрицательным');
                         isValid = false;
-                    } else if (uo > 1000000) {
-                        setError(turnoverInput, turnoverError, 'Максимальное значение - 1 000 000 руб');
+                    } else if (uo > 100000000) {
+                        setError(turnoverInput, turnoverError, 'Максимальное значение - 100 000 000 руб');
                         isValid = false;
                     } else {
                         clearError(turnoverInput, turnoverError);
@@ -309,8 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (zuo < 0) {
                         setError(zuoTurnoverInput, zuoTurnoverError, 'Товарооборот не может быть отрицательным');
                         isValid = false;
-                    } else if (zuo > 1000000) {
-                        setError(zuoTurnoverInput, zuoTurnoverError, 'Максимальное значение - 1 000 000 руб');
+                    } else if (zuo > 100000000) {
+                        setError(zuoTurnoverInput, zuoTurnoverError, 'Максимальное значение - 100 000 000 руб');
                         isValid = false;
                     } else {
                         clearError(zuoTurnoverInput, zuoTurnoverError);
@@ -387,8 +387,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (cash < 0) {
                         setError(cashTurnoverInput, cashTurnoverError, 'Товарооборот не может быть отрицательным');
                         isValid = false;
-                    } else if (cash > 1000000) {
-                        setError(cashTurnoverInput, cashTurnoverError, 'Максимальное значение - 1 000 000 руб');
+                    } else if (cash > 100000000) {
+                        setError(cashTurnoverInput, cashTurnoverError, 'Максимальное значение - 100 000 000 руб');
                         isValid = false;
                     } else {
                         clearError(cashTurnoverInput, cashTurnoverError);
@@ -479,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const speedNormMet = speedNormSelect ? speedNormSelect.value === 'yes' : false;
         const isHighTurnover = currentStoreInfo && currentStoreInfo.is_high_turnover == 1;
         
-        if (cashTurnover > 0 && cashTurnover <= 1000000 && speedNormMet && isHighTurnover) {
+        if (cashTurnover > 0 && cashTurnover <= 100000000 && speedNormMet && isHighTurnover) {
             return cashTurnover * 0.001;
         }
         return 0;

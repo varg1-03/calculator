@@ -2,8 +2,7 @@
     <div class="placeholder-icon">📊</div>
     <h3 class="placeholder-title">Расчёт заработной платы</h3>
     <p class="placeholder-text">
-        Введите номер магазина, количество часов<br>
-        и выберите должность
+        Введите номер магазина, часы<br>и выберите должность
     </p>
 </div>
 
@@ -37,7 +36,7 @@
         <div class="salary-breakdown">
             <div class="step base-salary-block">
                 <div class="salary-header">
-                    <h4>Окладная часть</h4>
+                    <h4>💰 Окладная часть</h4>
                 </div>
                 <div class="salary-value" id="salaryBase">0 ₽</div>
                 <div class="salary-note">За отработанные часы</div>
@@ -45,7 +44,7 @@
 
             <div class="step bonus-block" id="bonusBlock">
                 <div class="salary-header">
-                    <h4>Ежемесячная премия</h4>
+                    <h4>🎁 Ежемесячная премия</h4>
                 </div>
                 <div class="salary-value" id="bonusAmount">0 ₽</div>
                 <div class="salary-note" id="bonusDescription">-</div>
@@ -54,7 +53,7 @@
 
         <!-- Итоговая сумма -->
         <div class="total-result">
-            <div class="total-label">ИТОГО (оклад + премия)</div>
+            <div class="total-label">ИТОГО</div>
             <div class="total-value" id="finalSalary">0 ₽</div>
             <div class="total-breakdown" id="totalBreakdown">
                 Оклад: 0 ₽ + Премия: 0 ₽

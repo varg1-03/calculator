@@ -20,20 +20,7 @@
     
     /* ===== ЛАВАНДОВО-ФИАЛКОВАЯ ГАММА ===== */
     
-    /* Сброс и базовые настройки */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* Для изображений и медиа */
-    img, video, iframe {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    /* Основной контейнер */
+    /* Основной контейнер - десктоп версия */
     .main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -69,6 +56,310 @@
         position: sticky;
         top: 20px;
         padding-right: 5px;
+    }
+    
+    /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+    
+    /* Планшеты (768px - 1024px) */
+    @media (max-width: 1024px) {
+        .main {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 25px;
+        }
+        
+        .left-column {
+            position: static;
+        }
+        
+        .right-column {
+            position: static;
+            max-height: none;
+            overflow-y: visible;
+        }
+        
+        .placeholder {
+            height: auto;
+            min-height: 300px;
+        }
+        
+        .input-group {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+    
+    /* Телефоны (до 768px) */
+    @media (max-width: 768px) {
+        /* Общие настройки */
+        body {
+            padding: 10px;
+        }
+        
+        .page-wrapper {
+            padding: 0;
+        }
+        
+        .main {
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            gap: 15px;
+        }
+        
+        /* Левая колонка - поля ввода сверху */
+        .left-column {
+            padding: 15px;
+            order: 1;
+            margin-bottom: 0;
+        }
+        
+        /* Правая колонка - результаты снизу */
+        .right-column {
+            order: 2;
+            margin-top: 0;
+        }
+        
+        /* Заголовок */
+        .header {
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 22px;
+        }
+        
+        .header p {
+            font-size: 13px;
+        }
+        
+        /* Секции формы */
+        .form-section {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .section-icon {
+            font-size: 16px;
+        }
+        
+        /* Поля ввода */
+        .input-section {
+            margin-bottom: 12px;
+        }
+        
+        .input-section label {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+        .input-field, .custom-select {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+        
+        .salary-note {
+            font-size: 11px;
+        }
+        
+        /* Группировка полей */
+        .input-group {
+            gap: 12px;
+        }
+        
+        /* Подсекции премий */
+        .bonus-subsection {
+            padding: 12px;
+        }
+        
+        .bonus-subsection-title {
+            font-size: 14px;
+        }
+        
+        /* Результаты */
+        .results-container {
+            gap: 12px;
+        }
+        
+        .step {
+            padding: 15px;
+        }
+        
+        .info-row {
+            padding: 6px 0;
+        }
+        
+        .info-label {
+            font-size: 13px;
+        }
+        
+        .info-value {
+            font-size: 14px;
+        }
+        
+        .rate-display {
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+        }
+        
+        .rate-label {
+            font-size: 13px;
+        }
+        
+        .rate-value {
+            font-size: 18px;
+        }
+        
+        .salary-header h4 {
+            font-size: 14px;
+        }
+        
+        .salary-value {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .salary-note {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .total-result {
+            padding: 20px;
+        }
+        
+        .total-label {
+            font-size: 14px;
+        }
+        
+        .total-value {
+            font-size: 28px;
+        }
+        
+        .total-breakdown {
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+        
+        /* Плейсхолдер */
+        .placeholder {
+            padding: 30px 20px;
+            min-height: 250px;
+        }
+        
+        .placeholder-icon {
+            font-size: 40px;
+        }
+        
+        .placeholder-title {
+            font-size: 18px;
+        }
+        
+        .placeholder-text {
+            font-size: 13px;
+        }
+        
+        /* Бейджики */
+        .badge {
+            font-size: 10px;
+            padding: 3px 6px;
+        }
+        
+        /* Кнопки */
+        .btn {
+            padding: 8px 15px;
+            font-size: 13px;
+        }
+        
+        .btn-sm {
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+    }
+    
+    /* Очень маленькие телефоны (до 480px) */
+    @media (max-width: 480px) {
+        body {
+            padding: 5px;
+        }
+        
+        .main {
+            padding: 10px;
+            border-radius: 12px;
+        }
+        
+        .left-column, .right-column {
+            padding: 10px;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+        }
+        
+        .form-section {
+            padding: 12px;
+        }
+        
+        .input-field, .custom-select {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+        
+        .salary-value {
+            font-size: 20px;
+        }
+        
+        .total-value {
+            font-size: 24px;
+        }
+        
+        .total-result {
+            padding: 15px;
+        }
+        
+        .placeholder {
+            padding: 20px;
+        }
+        
+        .placeholder-icon {
+            font-size: 36px;
+        }
+        
+        .placeholder-title {
+            font-size: 16px;
+        }
+        
+        .step {
+            padding: 12px;
+        }
+    }
+    
+    /* Альбомная ориентация на телефонах */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .main {
+            gap: 10px;
+        }
+        
+        .left-column {
+            padding: 10px;
+        }
+        
+        .form-section {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
     }
     
     /* Стилизация скроллбара */
@@ -252,7 +543,6 @@
         font-size: 28px;
         font-weight: bold;
         margin: 10px 0;
-        word-break: break-word;
     }
     
     .base-salary-block .salary-value {
@@ -291,7 +581,6 @@
         font-weight: bold;
         margin: 10px 0;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        word-break: break-word;
     }
     
     .total-breakdown {
@@ -473,287 +762,6 @@
         border-bottom: 1px solid #d9b5e8;
     }
     
-    .bonus-subsection .input-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-bottom: 10px;
-    }
-    
-    /* Large Desktop (>1400px) */
-    @media (min-width: 1400px) {
-        .main {
-            max-width: 1600px;
-            padding: 50px;
-        }
-        
-        .input-field, .custom-select {
-            padding: 16px 20px;
-            font-size: 16px;
-        }
-    }
-    
-    /* Tablet Landscape (900px - 1024px) */
-    @media (max-width: 1024px) and (min-width: 901px) {
-        .main {
-            grid-template-columns: 1fr;
-            gap: 25px;
-            padding: 30px;
-        }
-        
-        .left-column {
-            position: static;
-        }
-        
-        .right-column {
-            position: static;
-            max-height: none;
-            overflow-y: visible;
-        }
-        
-        .input-group {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    
-    /* Tablet Portrait (768px - 900px) */
-    @media (max-width: 900px) and (min-width: 769px) {
-        .main {
-            grid-template-columns: 1fr;
-            padding: 25px;
-        }
-        
-        .left-column {
-            position: static;
-        }
-        
-        .right-column {
-            position: static;
-            max-height: none;
-            overflow-y: visible;
-        }
-        
-        .input-group {
-            grid-template-columns: 1fr;
-        }
-    }
-    
-    /* Mobile Large (481px - 768px) */
-    @media (max-width: 768px) {
-        .main {
-            grid-template-columns: 1fr;
-            gap: 20px;
-            padding: 15px;
-        }
-        
-        .left-column {
-            position: static;
-            padding: 15px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        
-        .right-column {
-            position: static;
-            max-height: none;
-            overflow-y: visible;
-            padding: 0;
-            width: 100%;
-        }
-        
-        .results-container {
-            width: 100%;
-            gap: 12px;
-        }
-        
-        .step {
-            padding: 15px;
-            margin: 0;
-            width: 100%;
-        }
-        
-        .salary-value {
-            font-size: 24px;
-        }
-        
-        .total-result {
-            padding: 20px;
-            margin-top: 5px;
-            width: 100%;
-        }
-        
-        .total-value {
-            font-size: 28px;
-        }
-        
-        .info-row {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .info-label {
-            width: auto;
-        }
-        
-        .input-group {
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-        
-        .input-field, .custom-select {
-            padding: 14px;
-            font-size: 16px;
-            width: 100%;
-        }
-        
-        .btn, .nav-link, .dropdown-toggle {
-            min-height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        
-        .placeholder {
-            height: auto;
-            min-height: 300px;
-            padding: 30px 20px;
-            width: 100%;
-        }
-        
-        .placeholder-steps {
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .placeholder-step {
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .bonus-subsection .input-group {
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-    }
-    
-    /* Mobile Small (<480px) */
-    @media (max-width: 480px) {
-        .main {
-            padding: 10px;
-            gap: 15px;
-        }
-        
-        .left-column {
-            padding: 12px;
-        }
-        
-        .right-column {
-            padding: 0;
-        }
-        
-        .header h1 {
-            font-size: 20px;
-        }
-        
-        .header p {
-            font-size: 14px;
-        }
-        
-        .form-section {
-            padding: 12px;
-        }
-        
-        .section-title {
-            font-size: 16px;
-            margin-bottom: 12px;
-        }
-        
-        .input-field, .custom-select {
-            padding: 12px;
-            font-size: 15px;
-        }
-        
-        .step {
-            padding: 12px;
-        }
-        
-        .salary-value {
-            font-size: 22px;
-        }
-        
-        .total-value {
-            font-size: 24px;
-        }
-        
-        .total-result {
-            padding: 15px;
-        }
-        
-        .total-breakdown {
-            font-size: 13px;
-            padding: 8px 12px;
-        }
-        
-        .info-row {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 4px;
-        }
-        
-        .info-label {
-            font-size: 14px;
-        }
-        
-        .info-value {
-            font-size: 16px;
-        }
-        
-        .rate-display {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
-        }
-        
-        .rate-value {
-            font-size: 18px;
-        }
-        
-        .placeholder-icon-secondary {
-            display: none;
-        }
-    }
-    
-    /* Очень маленькие экраны (<360px) */
-    @media (max-width: 360px) {
-        .main {
-            padding: 8px;
-        }
-        
-        .left-column {
-            padding: 10px;
-        }
-        
-        .header h1 {
-            font-size: 18px;
-        }
-        
-        .salary-value {
-            font-size: 20px;
-        }
-        
-        .total-value {
-            font-size: 22px;
-        }
-        
-        .badge {
-            font-size: 11px;
-            padding: 3px 6px;
-        }
-    }
-    
     /* Анимации */
     @keyframes fadeIn {
         from {
@@ -776,11 +784,153 @@
             transform: translateY(0);
         }
     }
-    
-    /* Для таблиц на мобильных */
-    .table-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
+        /* ===== ПРИНУДИТЕЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+    @media (max-width: 768px) {
+        /* Принудительно меняем расположение колонок */
+        .main {
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 15px !important;
+            gap: 15px !important;
+        }
+        
+        .left-column {
+            order: 1 !important;
+            width: 100% !important;
+            padding: 15px !important;
+            margin-bottom: 0 !important;
+            position: static !important;
+        }
+        
+        .right-column {
+            order: 2 !important;
+            width: 100% !important;
+            margin-top: 0 !important;
+            position: static !important;
+            max-height: none !important;
+            overflow-y: visible !important;
+        }
+        
+        /* Исправляем группу полей - теперь они в столбик */
+        .input-group {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+            margin-bottom: 15px !important;
+        }
+        
+        /* Каждое поле занимает всю ширину */
+        .input-group .input-section {
+            width: 100% !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Уменьшаем отступы */
+        .form-section {
+            padding: 15px !important;
+        }
+        
+        /* Результаты на всю ширину */
+        .results-container {
+            width: 100% !important;
+        }
+        
+        .step {
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        
+        /* Информационные строки в столбец */
+        .info-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 5px !important;
+        }
+        
+        .info-label {
+            width: 100% !important;
+        }
+        
+        /* Часовая ставка по центру */
+        .rate-display {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 8px !important;
+        }
+        
+        /* Плейсхолдер */
+        .placeholder {
+            height: auto !important;
+            min-height: 250px !important;
+            padding: 30px 20px !important;
+        }
+        
+        /* Уменьшаем размер шрифта для подписей */
+        .input-section label {
+            font-size: 13px !important;
+            margin-bottom: 5px !important;
+        }
+        
+        /* Делаем поля ввода более компактными */
+        .input-field, .custom-select {
+            padding: 10px 12px !important;
+            font-size: 14px !important;
+        }
     }
+    
+    /* Очень маленькие телефоны */
+    @media (max-width: 480px) {
+        .main {
+            padding: 10px !important;
+        }
+        
+        .left-column, .right-column {
+            padding: 10px !important;
+        }
+        
+        .form-section {
+            padding: 12px !important;
+        }
+        
+        .input-field, .custom-select {
+            padding: 8px 10px !important;
+            font-size: 13px !important;
+        }
+        
+        .salary-value {
+            font-size: 22px !important;
+        }
+        
+        .total-value {
+            font-size: 26px !important;
+        }
+        
+        .total-result {
+            padding: 15px !important;
+        }
+        
+        /* Уменьшаем отступы между полями */
+        .input-group {
+            gap: 12px !important;
+        }
+        
+        .input-section {
+            margin-bottom: 10px !important;
+        }
+    }
+    
+    /* Для экранов где текст "Фактически отработанные часы" может переноситься */
+    @media (max-width: 380px) {
+        .input-section label {
+            font-size: 12px !important;
+            white-space: normal !important;
+            word-break: break-word !important;
+        }
+        
+        .input-field, .custom-select {
+            padding: 8px 10px !important;
+            font-size: 12px !important;
+        }
+    }
+</style>
 </style>

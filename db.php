@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'k923008q_tables';
-$username = 'k923008q_tables';
-$password = '123qweR%';
+$dbname = 'calculator';
+$username = 'root';
+$password = '';
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 

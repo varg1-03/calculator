@@ -10,8 +10,9 @@ $positions = mysqli_query($conn, "SELECT * FROM positions ORDER BY position_name
 <html lang="ru">
 <head>
     <?php include 'partials/header.php'; ?>
-    <!-- Дополнительные стили для навигации -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <style>
+        /* Только основные стили для обертки, без дублирования */
         body {
             margin: 0;
             padding: 20px;
@@ -30,17 +31,17 @@ $positions = mysqli_query($conn, "SELECT * FROM positions ORDER BY position_name
             width: 100%;
         }
         
-        .main {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            min-height: 600px;
-            margin-top: 20px;
+        /* Мобильная адаптация для body */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
         }
     </style>
 </head>
@@ -59,21 +60,5 @@ $positions = mysqli_query($conn, "SELECT * FROM positions ORDER BY position_name
     </div>
     
     <?php include 'partials/footer.php'; ?>
-    
-    <script>
-    // Глобальные константы
-    
-    
-    const CURRENT_USER = {
-        isAuthenticated: <?php echo $isAuthenticated ? 'true' : 'false'; ?>,
-        isAdmin: <?php echo (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? 'true' : 'false'; ?>,
-        username: '<?php echo isset($_SESSION['username']) ? addslashes($_SESSION['username']) : ''; ?>'
-    };
-    </script>
-    
-    <script src="js/validators.js"></script>
-    <script src="js/calculators.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/auth.js"></script>
 </body>
 </html>
